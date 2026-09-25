@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastre-se e Faça Parte | Conecta+</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <a href="index.html" class="link-logo">
+      <img src="images/logo-nome-conecta.png" alt="Logotipo da ONG Conecta+ Tecnologia e Cidadania">
+    </a>
+
+    <nav class="menu-cabecalho">
+      <a href="historias.html" class="link-menu-cabecalho">Histórias</a>
+      <a href="projetos.html" class="link-menu-cabecalho">Projetos</a>
+      <a href="localizacao.html" class="link-menu-cabecalho">Pontos de Coleta</a>
+      <a href="cadastro.html" class="link-menu-cadastro ativo">Faça Parte 💙</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- FOTO PRINCIPAL CADASTRO -->
+    <section class="faixa-escura-cadastro">
+      <div class="conteudo-faixa-escura">
+        <h1>Faça Parte da Nossa Rede</h1>
+        <p>Seja doando um computador que você não usa mais, oferecendo mentoria voluntária ou cadastrando sua escola para receber um laboratório comunitário.</p>
+      </div>
+    </section>
+
+    <!-- GRUPO DO FORMULÁRIO -->
+    <section class="secao-formulario-cadastro">
+      <div class="container-cadastro-duplo">
+
+        <!-- INFORMAÇÕES E BENEFÍCIOS -->
+        <div class="lateral-beneficios">
+          <span class="lista-secao">Registro Solidário</span>
+          <h2>Por que colaborar com a Conecta+?</h2>
+          <p>Garantimos rastreabilidade total de cada equipamento e direcionamento responsável de recursos.</p>
+
+          <div class="lista-vantagens-colaborador">
+            <div class="item-vantagem">
+              <span class="icone-vantagem">🛡️</span>
+              <div>
+                <h4>Descarte Seguro de Dados</h4>
+                <p>Formatamos e sobrescrevemos discos rígidos seguindo normas técnicas rígidas de privacidade.</p>
+              </div>
+            </div>
+
+            <div class="item-vantagem">
+              <span class="icone-vantagem">📜</span>
+              <div>
+                <h4>Certificado de Doação</h4>
+                <p>Emitimos comprovante oficial de doação e responsabilidade ambiental para pessoas e empresas.</p>
+              </div>
+            </div>
+
+            <div class="item-vantagem">
+              <span class="icone-vantagem">📍</span>
+              <div>
+                <h4>Impacto Transparente</h4>
+                <p>Você recebe atualizações por e-mail sobre qual escola ou aluno recebeu a sua máquina recuperada.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-duvidas-rapidas">
+            <h4>Prefere entregar pessoalmente?</h4>
+            <p>Veja os endereços dos nossos polos parceiros espalhados pela cidade.</p>
+            <a href="localizacao.html" class="link-ver-pontos">Ver Pontos de Coleta &rarr;</a>
+          </div>
+        </div>
+
+        <!-- FORMULÁRIO RESPOSTAS -->
+        <div class="card-formulario">
+          
+          <div id="mensagem-sucesso" class="alerta-sucesso">
+            <h3>🎉 Cadastro Realizado com Sucesso!</h3>
+            <p>Obrigado por fortalecer a inclusão digital. Enviamos uma mensagem de confirmação para o seu WhatsApp/E-mail com os próximos passos.</p>
+          </div>
+
+          <form id="form-cadastro" action="#" method="POST">
+
+            <!-- TIPO DE COLABORAÇÃO -->
+            <fieldset class="grupo-campos">
+              <legend>1. Como Você Quer Participar?</legend>
+              <div class="opcoes-radio">
+                <label class="radio-label">
+                  <input type="radio" name="tipo_colaboracao" value="doacao" checked>
+                  <span>Quero Doar Equipamento</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="tipo_colaboracao" value="voluntario">
+                  <span>Quero Ser Voluntário</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="tipo_colaboracao" value="escola">
+                  <span>Cadastrar Minha Escola</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- DADOS PESSOAIS -->
+            <fieldset class="grupo-campos">
+              <legend>2. Dados do Colaborador</legend>
+
+              <div class="campo">
+                <label for="nome">Nome Completo *</label>
+                <input type="text" id="nome" name="nome" required minlength="3" placeholder="Ex: Felipe Silva">
+              </div>
+
+              <div class="linha-dupla">
+                <div class="campo">
+                  <label for="email">E-mail de Contato *</label>
+                  <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+                </div>
+
+                <div class="campo">
+                  <label for="cpf">CPF * (Validação Obrigatória)</label>
+                  <input type="text" id="cpf" name="cpf" required maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00">
+                </div>
+              </div>
+
+              <div class="campo">
+                <label for="telefone">Telefone / WhatsApp *</label>
+                <input type="tel" id="telefone" name="telefone" required maxlength="15" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" placeholder="(00) 00000-0000">
+              </div>
+            </fieldset>
+
+            <!-- ENDEREÇO E CEP -->
+            <fieldset class="grupo-campos">
+              <legend>3. Localização e Endereço</legend>
+
+              <div class="linha-dupla">
+                <div class="campo">
+                  <label for="cep">CEP *</label>
+                  <input type="text" id="cep" name="cep" required maxlength="9" pattern="\d{5}-\d{3}" placeholder="00000-000">
+                </div>
+
+                <div class="campo">
+                  <label for="rua">Logradouro / Rua *</label>
+                  <input type="text" id="rua" name="rua" required placeholder="Nome da rua ou avenida">
+                </div>
+              </div>
+
+              <div class="linha-tripla">
+                <div class="campo">
+                  <label for="numero">Número *</label>
+                  <input type="text" id="numero" name="numero" required placeholder="Nº">
+                </div>
+                <div class="campo">
+                  <label for="bairro">Bairro *</label>
+                  <input type="text" id="bairro" name="bairro" required placeholder="Bairro">
+                </div>
+                <div class="campo">
+                  <label for="cidade">Cidade / UF *</label>
+                  <div class="cidade-uf-flex">
+                    <input type="text" id="cidade" name="cidade" required placeholder="Cidade">
+                    <input type="text" id="estado" name="estado" required maxlength="2" placeholder="UF" style="width: 50px;">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- DETALHES -->
+            <fieldset class="grupo-campos">
+              <legend>4. Detalhes Adicionais</legend>
+
+              <div class="campo">
+                <label for="categoria_item">O Que Deseja Doar ou Área de Interesse *</label>
+                <select id="categoria_item" name="categoria_item" required>
+                  <option value="" disabled selected>Selecione uma opção...</option>
+                  <option value="notebook">Notebook / Laptop</option>
+                  <option value="desktop">Computador Completo (Desktop)</option>
+                  <option value="perifericos">Peças avulsas, Monitores ou Cabos</option>
+                  <option value="voluntario_aulas">Voluntariado: Aulas de Informática / Lógica</option>
+                  <option value="voluntario_tecnico">Voluntariado: Manutenção de Hardware</option>
+                  <option value="empresa_lote">Empresa: Descarte corporativo de lote grande</option>
+                </select>
+              </div>
+
+              <div class="campo">
+                <label for="observacoes">Observações ou Estado do Equipamento (Opcional)</label>
+                <textarea id="observacoes" name="observacoes" rows="3" placeholder="Ex: Notebook liga normalmente, mas a bateria está fraca. Acompanha carregador."></textarea>
+              </div>
+
+              <div class="campo-termos">
+                <label class="marcador-label">
+                  <input type="checkbox" required>
+                  <span>Declaro que as informações acima são verdadeiras e concordo com os termos de doação e destinação socioambiental da Conecta+.</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn-submeter-formulario">
+              Confirmar Registro e Gerar Protocolo Solidário &rarr;
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="conteudo-rodape">
+      <div class="coluna-rodape">
+        <h3>ONG Conecta+</h3>
+        <p>Tecnologia que conecta futuros. Inclusão digital e logística reversa de eletrônicos para transformar a educação na periferia.</p>
+        <p class="cnpj">CNPJ: 12.345.678/0001-90</p>
+      </div>
+
+      <div class="coluna-rodape">
+        <h3>Canais de Contato</h3>
+        <address class="contatos-ong">
+          <p>📞 Telefone: (11) 99999-9999</p>
+          <p>💬 WhatsApp: (11) 99999-9999</p>
+          <p>✉️ E-mail: contato@conectamais.org.br</p>
+          <p>📍 Sede: Rua da Cidadania, 150 - São Paulo, SP</p>
+        </address>
+      </div>
+    </div>
+
+    <div class="rodape-direitos">
+      <p>&copy; 2026 Associação Conecta+ Brasil. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="js/masks.js"></script>
+</body>
+</html>
