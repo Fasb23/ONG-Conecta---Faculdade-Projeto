@@ -109,54 +109,51 @@ html, body {
   display: flex;                   
   justify-content: space-between;  
   align-items: center;              
-  padding: 8px 40px;              
+  padding: 14px 40px;              
   background-color: var(--cor-fundo);       
 }
 
-.link-logo img{
-  margin-top: 10px;
-  margin-left: 100px;
+.link-logo img {
+  margin: 0;
   width: auto;
-  height: 70px;
-
+  height: 56px;
+  display: block;
 }
 
-.menu-cabecalho{
+.menu-cabecalho {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
-.link-menu-cabecalho{
+.link-menu-cabecalho {
   color: var(--cor-texto);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
-  font-size: 18px;
-
+  font-size: 16px;
+  padding: 6px 8px;
 }
 
-.link-menu-cabecalho:hover{
+.link-menu-cabecalho:hover {
   color: var(--cor-secundaria);
-
 }
 
-.link-menu-cadastro{
-  color: var(--cor-texto);
+.link-menu-cadastro {
+  color: var(--cor-fundo);
+  background-color: var(--cor-secundaria);
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
   border-radius: 8px;
-  padding: 20px;
-  background-color: var(--cor-secundaria);
-  color: var(--cor-fundo);
-  font-size: 18px;
-
+  padding: 10px 18px;
+  font-size: 16px;
+  display: inline-block;
 }
 
-.link-menu-cadastro:hover{
-  color: var(--cor-secundaria-hover);
-
+.link-menu-cadastro:hover {
+  background-color: var(--cor-secundaria-hover);
+  color: var(--cor-fundo);
 }
 
 /*----------- RODAPE -----------*/
@@ -1698,7 +1695,7 @@ html, body {
     padding: 60px 40px;
   }
   .cabecalho {
-    padding: 20px 40px;
+    padding: 16px 30px;
   }
   .conjunto-cards,
   .secao-historia,
@@ -1706,10 +1703,10 @@ html, body {
   .secao-polos-container,
   .secao-caso-destaque,
   .secao-grade-historias,
-  .secao-cadastro,
+  .secao-formulario-cadastro,
   .rodape {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -1722,7 +1719,7 @@ html, body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 0 30px 40px 30px;
+    padding: 0 20px 40px 20px;
   }
   .card-projeto {
     flex: 1 1 calc(50% - 20px);
@@ -1755,19 +1752,48 @@ html, body {
   .coluna-rodape {
     flex: 1 1 200px;
   }
-  .container-passos-ciclo {
+  /* Cadastro */
+  .container-cadastro-duplo {
+    flex-direction: column;
+    gap: 40px;
+  }
+  /* Localização */
+  .lista-polos {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .card-polo {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 280px;
+  }
+  .guia-descarte {
     flex-direction: column;
     gap: 20px;
   }
-  .container-cadastro-duplo {
+  /* Histórias */
+  .container-destaque {
     flex-direction: column;
     gap: 30px;
+    padding: 35px;
+  }
+  .foto-caso-destaque {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .lista-historias {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .card-historia {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 280px;
   }
   .faixa-escura,
   .faixa-escura-projetos,
   .faixa-escura-coleta,
   .faixa-escura-historias {
-    padding: 60px 30px;
+    padding: 60px 24px;
     min-height: auto;
   }
   .secao-detalhes-projetos,
@@ -1775,36 +1801,53 @@ html, body {
   .secao-polos-container,
   .secao-caso-destaque,
   .secao-grade-historias,
-  .secao-cadastro,
+  .secao-formulario-cadastro,
   .rodape {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
 /* Cenário 4: Tablets Verticais e Celulares Maiores (<= 768px) */
 @media (max-width: 768px) {
+  /* Cabeçalho mobile */
   .cabecalho {
     flex-direction: column;
-    gap: 15px;
-    padding: 15px 20px;
-    text-align: center;
+    gap: 12px;
+    padding: 12px 16px;
+    align-items: center;
+  }
+  .link-logo img {
+    height: 48px;
+    margin: 0 auto;
   }
   .menu-cabecalho {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 8px;
+    width: 100%;
   }
-  .menu-cabecalho a {
-    font-size: 14px;
-    padding: 8px 12px;
+  .link-menu-cabecalho {
+    font-size: 13px;
+    padding: 6px 10px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 6px;
   }
+  .link-menu-cadastro {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+
   .col-6, .col-4, .col-3 {
     grid-column: span 12;
   }
+  
+  /* Index */
   .conjunto-cards {
     flex-direction: column;
-    padding: 0 20px 40px 20px;
+    padding: 0 16px 40px 16px;
     gap: 20px;
   }
   .card-projeto {
@@ -1814,11 +1857,17 @@ html, body {
   }
   .grupo-metricas {
     flex-direction: column;
-    gap: 25px;
+    gap: 24px;
   }
   .item-metrica {
     width: 100%;
   }
+  .grupo-historia {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* Projetos */
   .bloco-projeto,
   .bloco-projeto.invertido {
     flex-direction: column;
@@ -1829,15 +1878,145 @@ html, body {
     width: 100%;
     height: 220px;
   }
-  .lista-polos,
+  .container-passos-ciclo {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .botoes-projetos {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .botoes-projetos a {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* Pontos de Coleta (localizacao.html) */
+  .lista-polos {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card-polo {
+    width: 100%;
+    flex: none;
+  }
+  .bloco-mapa-interativo {
+    padding: 16px;
+    margin-bottom: 30px;
+  }
+  .container-mapa-visual {
+    height: 280px;
+  }
+  .guia-descarte {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .coluna-guia {
+    width: 100%;
+  }
+  .banner-coleta-empresarial {
+    flex-direction: column;
+    padding: 24px 16px;
+    gap: 16px;
+    text-align: center;
+  }
+  .conteudo-banner-coleta {
+    width: 100%;
+  }
+  .botao-banner-coleta {
+    width: 100%;
+  }
+  .link-banner-coleta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* Histórias (historias.html) */
+  .container-destaque {
+    flex-direction: column;
+    padding: 24px 16px;
+    gap: 20px;
+    width: 100%;
+  }
+  .foto-caso-destaque {
+    width: 100%;
+  }
+  .foto-caso-destaque img {
+    width: 100%;
+    height: auto;
+    max-height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .conteudo-caso-destaque {
+    width: 100%;
+  }
   .lista-historias {
     flex-direction: column;
     gap: 20px;
   }
-  .card-polo,
   .card-historia {
     width: 100%;
+    flex: none;
   }
+  .chamada-historias {
+    padding: 30px 16px;
+    text-align: center;
+  }
+  .botoes-historias {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  .botoes-historias a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* Cadastro (cadastro.html) */
+  .secao-formulario-cadastro {
+    padding: 40px 16px;
+  }
+  .container-cadastro-duplo {
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+  .lateral-beneficios {
+    width: 100%;
+  }
+  .card-formulario {
+    width: 100%;
+    padding: 24px 16px;
+    box-sizing: border-box;
+  }
+  .grupo-campos {
+    padding: 16px 12px;
+    margin-bottom: 18px;
+  }
+  .linha-dupla,
+  .linha-tripla,
+  .cidade-uf-flex {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  .campo {
+    width: 100%;
+  }
+  .campo input,
+  .campo select,
+  .campo textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Rodapé */
   .conteudo-rodape {
     flex-direction: column;
     gap: 30px;
@@ -1847,17 +2026,19 @@ html, body {
     width: 100%;
   }
   .rodape {
-    padding: 40px 20px 20px 20px;
+    padding: 40px 16px 20px 16px;
   }
   .rodape .coluna-links ul {
     padding: 0;
     list-style: none;
   }
+
+  /* Faixas de Abertura */
   .faixa-escura,
   .faixa-escura-projetos,
   .faixa-escura-coleta,
   .faixa-escura-historias {
-    padding: 60px 20px;
+    padding: 60px 16px;
     min-height: auto;
   }
   .conteudo-faixa-escura h1 {
@@ -1871,41 +2052,31 @@ html, body {
   .secao-historia,
   .secao-polos-container,
   .secao-caso-destaque,
-  .secao-grade-historias,
-  .secao-cadastro {
-    padding: 40px 20px;
-  }
-  .container-mapa-visual {
-    height: 300px;
-  }
-  .linha-dupla,
-  .linha-tripla,
-  .cidade-uf-flex {
-    flex-direction: column;
-    gap: 15px;
+  .secao-grade-historias {
+    padding: 40px 16px;
   }
 }
 
 /* Cenário 5: Smartphones Compactos (<= 480px) */
 @media (max-width: 480px) {
   .cabecalho {
-    padding: 12px 10px;
+    padding: 10px 12px;
   }
   .link-logo img {
-    max-height: 40px;
+    height: 40px;
   }
   .menu-cabecalho {
     gap: 6px;
   }
   .menu-cabecalho a {
     font-size: 12px;
-    padding: 6px 8px;
+    padding: 5px 8px;
   }
   .faixa-escura,
   .faixa-escura-projetos,
   .faixa-escura-coleta,
   .faixa-escura-historias {
-    padding: 40px 15px;
+    padding: 40px 12px;
   }
   .conteudo-faixa-escura h1 {
     font-size: 20px;
@@ -1917,33 +2088,37 @@ html, body {
   }
   .link-botao-faixa-escura,
   .btn-submeter-formulario,
-  .link-acao-projeto {
+  .link-acao-projeto,
+  .btn-polo-maps {
     width: 100%;
     text-align: center;
     box-sizing: border-box;
     display: block;
-    padding: 12px 15px;
+    padding: 12px 14px;
   }
   .conjunto-cards,
   .secao-historia,
   .secao-detalhes-projetos,
   .secao-polos-container,
-  .secao-cadastro,
+  .secao-formulario-cadastro,
   .rodape {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .card-formulario {
+    padding: 18px 12px;
   }
   .projeto-imagem {
     height: 180px;
   }
   .bloco-projeto {
-    padding: 15px;
+    padding: 14px;
   }
   .container-mapa-visual {
-    height: 240px;
+    height: 220px;
   }
   .rodape-direitos {
-    font-size: 12px;
+    font-size: 11px;
     padding-top: 15px;
   }
 }
